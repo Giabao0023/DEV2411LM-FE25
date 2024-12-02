@@ -6,6 +6,134 @@
     <title>Table</title>
 </head>
 <body>
-    
+    <table border="1" width ="500" align="center" cellspacing = "0" cellpadding="5">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>MSV</th>
+                <th>Họ tên</th>
+                <th>Ngày sinh</th>
+                <th>Khoa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center">1</td>
+                <td>SV01</td>
+                <td>Nguyễn Văn A</td>
+                <td>29/11/2003</td>
+                <td rowspan="2">CNTT</td>
+            </tr>
+            <tr>
+                <td align="center">2</td>
+                <td>SV01</td>
+                <td>Nguyễn Văn B</td>
+                <td>30/11/2003</td>
+                <!-- <td>CNTT</td> -->
+            </tr>
+            <tr>
+                <td align="center">3</td>
+                <td>SV01</td>
+                <td>Nguyễn Văn C</td>
+                <td>31/11/2003</td>
+                <td>NNA</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Tổng số sv</td>
+                <td colspan="2">3</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <table border="1" width="500" align="center" cellspacing="0" cellpadding="5">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Mã hàng hoá</th>
+                <th>Tên hàng hoá</th>
+                <th>Danh mục</th>
+                <th>Giá nhập</th>
+                <th>Giá bán</th>
+            </tr>
+            <tbody>
+                <tr align="center" >
+                <td>1</td>
+                <td>SP01</td>
+                <td>Iphone 13</td>
+                <td rowspan="3">Iphone</td>
+                <td>10000</td>
+                <td>12000</td>
+                </tr>
+                <tr align="center">
+                <td>2</td>
+                <td>SP02</td>
+                <td>Iphone 14</td>
+                <!-- <td>Iphone</td> -->
+                <td>12000</td>
+                <td>14000</td>
+                </tr>
+                <tr align="center">
+                <td >3</td>
+                <td>SP03</td>
+                <td>Iphone 15</td>
+                <!-- <td>Iphone</td> -->
+                <td>14000</td>
+                <td>16000</td>
+                </tr>
+                <tr align="center">
+                <td >4</td>
+                <td>SP04</td>
+                <td>Xiaomi A</td>
+                <td rowspan="2">Xiaomi</td>
+                <td>5000</td>
+                <td>7000</td>
+                </tr>
+                <tr align="center">
+                <td>5</td>
+                <td>SP05</td>
+                <td>Xiaomi B</td>
+                <!-- <td>Xiaomi</td> -->
+                <td>5000</td>
+                <td rowspan="2">6500</td>
+                </tr>
+                <tr align="center">
+                <td>6</td>
+                <td>SP06</td>
+                <td>Samsung A20</td>
+                <td rowspan="3">Samsung</td>
+                <td>6000</td>
+                <!-- <td>6500</td> -->
+                </tr>
+                <tr align="center">
+                <td>7</td>
+                <td>SP07</td>
+                <td>Samsung Note 24 Ultra</td>
+                <!-- <td>Samsung</td> -->
+                <td colspan="4" rowspan="4">12000</td>
+                <!-- <td>14000</td> -->
+                </tr>
+                <tr align="center">
+                <td>8</td>
+                <td>SP08</td>
+                <td>Samsung 24 Ultra</td>
+                <!-- <td>Samsung</td> -->
+                <!-- <td>14000</td>
+                <td >16000</td> -->
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr align="center">
+                    <td colspan="4">Tổng tiền</td>
+                    <td>73000</td>
+                    <td>75000</td>
+                </tr>
+            </tfoot>
+        </thead>
+    </table>
 </body>
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>From</title>
+    </head>
+    <body>
+        <form action method="post" enctype="multipart/form-data">
+            <!--Type: text-->
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username"
+                placeholder="Nhập tên người dùng">
+            <br>
+            <!--Type : Password-->
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password"
+                placeholder="Nhập mật khẩu">
+            <!-- type hidde -->
+            <input type="hidden" name="ma_sp" id="ma_sp">
+            <!-- type checbox-->
+            <br>
+            <input type="checkbox" name="so_thich" id="bong_chuyen">
+            <label for="bong_chuyen">Bóng chuyền</label>
+            <input type="checkbox" name="so_thich" id="bong_da">
+            <label for="bong_da">Bóng đá</label>
+            <input type="checkbox" name="so_thich" id="cau_long">
+            <label for="cau_long">Cầu Lông</label>
+            <!-- type radio -->
+            <br>
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+            <br>
+            <!-- button-->
+            <input type="button" name="button" id="button" value="Gửi">
+            <button>Button</button>
+            <!-- sumbit -->
+            <input type="submit" name="sumbit" id="sumbit">
+            <!-- Reset: reset về giá tro=ị ban đầu -->
+            <input type="reset" name="reset" id="reset">
+        </form>
+        <br>
+        <br>
+        <br>
+        <form action method="post" enctype="multipart/form-data">
+            <!--file-->
+            <input type="file" name="image" id="image">
+            <!--type color: màu sắc -->
+            <input type="color" name="color" id="color"><br>
+            <!-- tyoe: thời gian -->
+            <input type="date" name="date" id="date"> <br>
+            <input type="datetime-local" name="datetime-local"
+                id="datetime-local"><br>
+            <input type="time" name="time" id="time"><br>
+            <input type="month" name="time" id="time"><br>
+            <input type="week" name="week" id="week"><br>
+            <!-- type: number-->
+            <input type="number" name="number" id="number"><br>         
+            <!-- type: range-->
+            <input type="range" name="range" id="range" min="0" max="100"
+                value="20"><br>
+            <!-- type:search-->
+            <input type="search" name="search" id="search">
+            <!-- type : tel -->
+            <input type="tel" name="tel" id="tel">
+            <br>
+            <!--type: url-->
+            <label for="url">url</label>
+            <input type="url" name="url" id="url">
+            <!--Thẻ select -option -->
+            <select name="adress" id="adress">
+                <option value="">----Select------</option>
+                <option value="HN">Hà Nội</option>
+                <option value="HD">Hải Dương</option>
+                <option value="TB">Thái Bình</option>
+            </select>
+        </form>
+    </body>
+</html>

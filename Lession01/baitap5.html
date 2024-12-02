@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        ul {
+            list-style-type: none; /* Xóa dấu chấm đầu dòng */
+            padding: 0;
+            margin: 20px auto;
+            display: block; /* Đặt menu thành dạng block để các mục hiển thị đứng */
+            width: 200px; /* Đặt chiều rộng của menu */
+        }
+        li {
+            margin: 10px 0; /* Khoảng cách giữa các mục theo chiều dọc */
+            padding: 10px 10px; /* Khoảng cách bên trong */
+            text-align: center;
+        }
+        li a {
+            text-decoration: none; /* Xóa gạch chân */
+            color: yellow; /* Màu chữ vàng */
+            font-size: 16px;
+            font-weight: normal; /* Bỏ in đậm chữ */
+        }
+        li:hover {
+            border: 2px solid #ff69b4; /* Viền màu hồng khi hover */
+        }
+        /* Đặt màu nền cho các mục */
+        li#home {
+            background-color: #ff69b4; /* Màu hồng cho "Trang chủ" */
+            border: 2px solid #ff69b4; /* Viền màu hồng cho "Trang chủ" */
+        }
+        li:not(#home) {
+            background-color: #d3d3d3; /* Màu xám cho các mục còn lại */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="home"><a href="#">Trang chủ</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Khóa học</a></li>
+        <li><a href="#">Liên hệ</a></li>
+        <li><a href="#">Đăng ký</a></li>
+        <li><a href="#">Đăng nhập</a></li>
+    </ul>
+</body>
+</html>

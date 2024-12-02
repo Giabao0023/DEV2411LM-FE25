@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- thẻ div: thường để nhóm các thành phần nội dung -->
+        <div>
+            <h3>Đây là tiêu đề</h3>
+            <p>Đây là nội dung</p>
+        </div>
+        <form action>
+            <!-- Thẻ lable Hiển thị nhãn cho 1 thành phần-->
+            <div>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="usermname">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password">
+            </div>
+        </form>
+        <!-- Thẻ span: Xác định các thành phần trên cùng 1 thàng và kết hợp với css để định dạng thành phần nội dung-->
+        <p>Đây là 1 đoạn text có sử dụng thẻ <span
+                style="color: red;">span</span></p>
+        <!-- Thể articel: hiển thị nội dung, tin tức, đoạn nhận xét, khu vực quảng cáo-->
+         <article>
+            <h3>Nhập môn HTML</h3> 
+            <p>tìm hiểu về ngôn ngữ siêu văn bản</p>         
+         </article>
+         <!-- Thẻ aside: xấc định nội dung bên ngoài nội dung chính -->
+          <aside>
+            <h2>lập trình Web</h2>
+            <p>Tìm hiểu về lập trình Web</p>
+          </aside>
+          <!-- Thẻ Detalis: hiển thị nội dung chi tiết
+            Thẻ sumary :tiêu đề nội dung chi tiết-->
+            
+            <details>
+                <summary>Học HTML cơ bản</summary>
+                <p>Tìm hiểu cấu trúc HTML</p>
+                <p>Xây dựng giao diện HTML</p>
+            </details>
+            <!-- Progress: thẻ mô tả tiền trình làm việc-->
+             Downloading: <progress value="20" max="100"></progress>
+             <br>
+             <!-- datalist: sử dụng cùng với thẻ input để hiển thị dnah sách-->
+              <input type="text" name="tenmonhoc" list="listMH">
+              <datalist id="listMH">
+                <option value="Học HTML"></option>
+                <option value="Học Javascrip"></option>
+                <option value="Học CSS"></option>
+                <option value="Học PHP"></option>
+                <option value="Học Java"></option>
+                <option value="Học C#"></option>
+              </datalist>
+    </body>
+</html>
