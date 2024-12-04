@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action method="post" enctype="multipart/form-data">
+    <table width="500">
+       <p><big><span
+            style="color: rgb(28, 76, 220);"
+        >Chào mừng bạn đến với tạp chí HTML5 & CSS3</span></big></p><hr>
+    </table>
+    <label for="username" size="">Tên đăng nhập</label>
+    <input size="25" type="text" name="username" id="username">
+    <br>
+    <br>
+
+    <label for="password">Mật khẩu</label>
+    <input size="25" type="passsword" name="password" id="password">
+    <br>
+    <br>
+    <br>
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email">
+    <br>
+    <br>
+    <br>
+    <label for="thanh_pho">Thành phố</label>
+    <input type="text" name="thanh_pho" list="thanh_pho">
+    <datalist id=thanh_pho>
+        <option value="HN">Hà nội</option>
+        <option value="TB">Thái Bình</option>
+        <option value="NB">Ninh Bình</option>
+    </datalist>
+    <br>
+    <br>
+    <br>
+    <label for="do_tuoi">Độ tuổi trung bình</label>
+    <input type="range" name="range" id="range" min="0" max="100">
+    <br>
+    <br>
+    <dl>
+        <dt>Bạn muốn theo dõi bài viết từ chủ đề nào?</dt>
+        <dd>
+            <input size="25" type="checkbox" name="chu_de" id="HTML5">
+            <label for="HTML5">HTML5 cơ bản</label>
+            <input size="25" type="checkbox" name="chu_de" id="co_ban">
+            <label for="co_ban">CSS3 cơ bản</label><br>
+            <input size="25" type="checkbox" name="chu_de" id="HTML5_nang_cao">
+            <label for="HTML5_nang_cao">HTML5 nâng cao</label>
+            <input size="25" type="checkbox" name="chu_de" id="nang_cao">
+            <label for="nang_cao">CSS3 nâng cao</label>
+
+        </dd>
+    </dl>
+   </form>
+
+</body>
+</html>

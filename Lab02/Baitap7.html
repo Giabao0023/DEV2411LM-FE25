@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-header {
+            background-color: #cc3300;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+
+        .form-group .date-input {
+            display: flex;
+            gap: 5px;
+        }
+
+        .form-group .date-input input {
+            width: calc(33.33% - 10px);
+            text-align: center;
+        }
+
+        .form-footer {
+            text-align: center;
+        }
+
+        .form-footer button {
+            padding: 10px 20px;
+            background-color: #cc3300;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .form-footer button:hover {
+            background-color: #b32400;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="form-header">
+    To Do List
+    </div>
+    <form>
+        <div class="form-group">
+            <label for="item">Item</label>
+            <input type="text" id="item" name="item">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category">
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Due Date</label>
+            <div class="date-input">
+                <input type="text" name="day" placeholder="DD">
+                <input type="text" name="month" placeholder="MM">
+                <input type="text" name="year" placeholder="YYYY">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Status</label>
+            <input type="checkbox" id="status" name="status">
+            <label for="status" style="display: inline;">Done</label>
+        </div>
+
+        <div class="form-footer">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

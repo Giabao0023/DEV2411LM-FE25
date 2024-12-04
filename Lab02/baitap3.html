@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời khóa biểu</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        th {
+            font-weight: bold;
+        }
+        .title-row {
+            background-color: #666;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .header {
+            background-color: #aaa;
+            font-weight: bold;
+        }
+        .sub-header {
+            background-color: #ddd;
+        }
+        .gray {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            
+            <tr>
+                <th colspan="4">Lịch học</th>
+            </tr>
+            
+            <tr>
+                <th rowspan="2">Buổi</th>
+                <th colspan="2" class="header" >Thời gian</th>
+                <th rowspan="2" class="header">Môn học</th>
+            </tr>
+            
+            <tr>
+            
+                <th>Bắt đầu</th>
+                <th>Kết thúc</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="header">
+                <td rowspan="2">Thứ 2</td>
+                <td>8:00 AM</td>
+                <td>12:00 AM</td>
+                <td>Cơ sở dữ liệu</td>
+            </tr>
+            <tr>
+                <td>8:00 AM</td>
+                <td>12:00 AM</td>
+                <td>Nhập môn C</td>
+            </tr>
+            <tr class="header">
+                <td rowspan="3">Thứ 3</td>
+                <td>8:00 AM</td>
+                <td>12:00 AM</td>
+                <td>Thiết kế web</td>
+            </tr>
+            <tr>
+                <td>2:00 PM</td>
+                <td>5:00 PM</td>
+                <td>PHP</td>
+            </tr>
+            <tr class="header">
+                <td>6:00 PM</td>
+                <td>8:00 PM</td>
+                <td>PHP</td>
+            </tr>
+            <tr>
+                <td>Thứ 4</td>
+                <td>2:00 PM</td>
+                <td>9:00 PM</td>
+                <td>JAVA CORE</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
