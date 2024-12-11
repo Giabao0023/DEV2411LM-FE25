@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Các bộ chọn Css</title>
+        <style>
+        /* Bộ chọn * - chọn tất cả các thành phần HTML */
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*Tag - có thể các id, class, tên thẻ, tên thuộc tính
+        -chọn tất cả các thẻ cùng loại
+        */
+        /* Tag01 tag02: tất cả các thẻ tag02 nằm trong tag01 thì đều nhận đc thuộc tính css */
+        div p{
+            /* tất cả thẻ p nằm trong thẻ div đều nhận thuộc tính
+            color là màu xanh */
+            color: blueviolet;
+        }
+        
+        /* Tag01.tag02: tất cả các thẻ tag01 và tag02
+        đều có thuộc tính cùng loại */
+        /*h2{
+            color: red;
+        }
+        h3{
+            color: red;
+        }*/
+        h2,h3{
+            color: red;
+        }
+        /* tag01+tag02: tất cả tcas thẻ
+        /*tag01>tag02: tất cả các thẻ tag02 nằm trong tag01 thì đều nhận đc thuộc tính css
+        nhưng thẻ con hoặc nhiều cách khác
+            tất cả các thẻ tag02 là thẻ con của thẻ tag01
+        */
+
+        h2+p{
+            color: red;
+        }
+
+        section>p{
+            color: yellow;
+        }
+    </style>
+    </head>
+    <body>
+        <!-- tag01 tag02 -->
+        <div>
+            <p>
+                Tag 01 Tag01 (div p)
+
+            </p>
+            <nav>
+               <p>Tag 01 Tag01 (div p)</p> 
+            </nav>
+
+        </div>
+        <!-- Tag01, tag02-->
+        <div>
+            <h2>Tag01, Tag02</h2>
+            <h3>Tag01, tag02</h3>
+        </div>
+
+        <!-- Tag01+Tag02-->
+        <div>
+            <h2>Tag01+Tag02</h2>
+            <p>Chó Tuấn</p>
+            <p>Chó Tuấn</p>
+        </div>
+
+        <!-- Tag01>tag02-->
+        <section>
+            <h4>Tag01>Tag02</h4>
+            <p>Chó Tuấn</p>
+            <div>
+                <p>Chó Tuấn</p>
+            </div>
+        </section>
+    </body>
+</html>

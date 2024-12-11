@@ -1,0 +1,10 @@
+nav,
+nav ul,
+nav li,
+nav a {
+    /* Thiết lập các thông số về lề đường kẻ... */
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}

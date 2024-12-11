@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu</title>
+        <style>
+        *{
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            /* bỏ list style*/
+            list-style: none;
+        }
+        a{
+            /*bỏ gạch chân*/
+            text-decoration: none;
+        }
+
+        #menu-1>ul{
+                display: flex;
+        }
+        #menu-1>ul>li{
+            padding: 1rem;
+            background-color: #ccc;
+            position: relative;
+        }
+        #menu-2{
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+        #menu-2 li{
+            padding: 0.3rem 1rem 0.3rem 1rem;
+            background-color: aqua;
+        }
+
+        #menu-1>ul>li:hover #menu-2{
+            display: block;
+        }
+        #menu-1>ul>li:hover{
+            background-color: aqua;
+            
+        }
+
+        #menu-1>ul>li:hover>a{
+            color: red;
+        }
+        /* 
+            padding và margin 
+            1 dối số - cho 4 chiều trên dưới trái phải 
+            2 đối số - số đầu tiên: bên trên và dưới
+                    - số thứ 2: cho bên trái và bên phải
+            3 đối số: -số đàu tiên: bên trên
+                        - số thứ 2: cho bên trái và bên phải
+                        - số thứ 3 là bên dưới
+            4 đối số: trên -> phải -> dưới -> trái
+        */
+
+    </style>
+    </head>
+    <body>
+        <nav id="menu-1">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li>
+                    <a href="#">Sản phẩm</a>
+                    <nav id="menu-2">
+                        <ul>
+                            <li><a href="#">Iphone</a></li>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="#">Xiaomi</a></li>
+                        </ul>
+                    </nav>
+                </li>
+               
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Tin tức</a></li>
+
+            </ul>
+        </nav>
+    </body>
+</html>

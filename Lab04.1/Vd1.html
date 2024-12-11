@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-Css</title>
+    <style>
+        nav {
+            height: 40px;
+            background: #4c4e5a;
+            background: -webkit-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+            background: -moz-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+            background: -o-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+            background: linear-gradient(to bottom, #4c4e5a 0%, #2c2d33 100%);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 0 14px;
+            line-height: 40px;
+            text-decoration: none;
+            color: #f3f3f3;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+            transition: color 0.2s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #8fde62;
+        }
+
+        nav ul li ul {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 150px;
+            opacity: 0;
+            visibility: hidden;
+            background: #1f2024;
+            border-radius: 0 0 5px 5px;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+        }
+
+        nav ul li:hover > ul {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        nav ul li ul li {
+            border-bottom: 1px solid #393942;
+        }
+
+        nav ul li ul li:last-child {
+            border-bottom: none;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+            text-align: left;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+        }
+
+        nav ul li ul li a.css3 {
+            background-image: url('docs.png');
+        }
+
+        nav ul li ul li a.html5 {
+            background-image: url('bubble.png');
+        }
+
+        nav ul li ul li a.php {
+            background-image: url('arrow.png');
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">Sản phẩm</a>
+                <ul>
+                    <li><a href="#" class="css3">CSS3</a></li>
+                    <li><a href="#" class="html5">HTML5</a></li>
+                    <li><a href="#" class="php">PHP</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

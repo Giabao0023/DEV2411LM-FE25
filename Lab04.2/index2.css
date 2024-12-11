@@ -1,0 +1,45 @@
+nav#mainNav{
+    width: 200px;
+    background: #ccc;
+}
+nav#mainNav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav#mainNav ul li{
+    border-bottom: solid 1px #fff;
+    position: relative;
+}
+nav#mainNav ul li a{
+    text-decoration: none;
+    display: block;
+    width: 85%;
+    padding: 10px 15px;
+}
+.selected,
+nav#mainNav ul li a:hover{
+    background: red;
+    color: #fff;
+}
+nav#mainNav ul li>ul{
+    position: absolute;
+    margin-left: 200px;
+    width: 200px;
+    background: #666;
+    top: 0px;
+}
+nav#mainNav ul li>ul li{
+    border-left:solid 1px #fff ;
+}
+nav#mainNav ul li>ul{
+    position: absolute;
+    margin-left: 200px;
+    width: 200px;
+    background: #666;
+    top: 0px;
+    visibility: hidden;
+}
+nav#mainNav ul li:hover >ul{
+    visibility: visible;
+}
