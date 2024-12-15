@@ -16,15 +16,15 @@ header{
 }
 @font-face{
     font-family: Lato-Bold;
-    src: url("../fonts/Lato-Bold.ttf");
+    src: url("../fonts/OpenSans-CondLightItalic.ttf");
 }
 @font-face{
     font-family: Lato-Black;
-    src: url("../fonts/Lato-Black.ttf");
+    src: url("../fonts/OpenSans-Italic.ttf");
 }
 @font-face{
     font-family: Lato-Light;
-    src: url("../fonts/Lato-Light.ttf");
+    src: url("../fonts/OpenSans-ExtraBold.ttf");
 }
 #logo{
     width: 200px;
@@ -35,7 +35,7 @@ a{
 }
 #logo a{
     color: #fff;
-    font-family: Lato-Bold;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
 }
 #logo a span{
@@ -60,4 +60,62 @@ a{
 #banner{
     background: #f06c64;
     padding: 50px 0;
+}
+#ourServices{
+    padding: 66px 0;
+    background: #f2f2f2;
+}
+#portfolio h2,
+#aboutUs h3,
+#getaQuote h3,
+#ourServices h1{
+    font-family: 'Times New Roman', Times, serif ;
+    font-size: 30px;
+    color: #666d89;
+}
+#portfolio p,
+#aboutUs p,
+#getaQuote p,
+#ourServices p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #767e9e;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 30px 0;
+}
+.itemService{
+    width: 220px;
+    float: left;
+    margin-right: 20px;
+    margin-left: 80px;
+}
+#portfolio{
+    background: #2d303a;
+    padding: 65px 0;
+}
+.portfolio{
+    margin-bottom: 18px;
+}
+.portfolio ul li{
+    float: left;
+    margin-right: 10px;
+}
+.portfolio ul li a{
+    display: block;
+    color: #767e9e;
+    font-size: 12px;
+    padding: 5px;
+    border: solid 1px #767e9e;
+    border-radius: 5px;
+}
+.selectedx,
+.portfolio ul li a:hover{
+    border: solid 1px #c5c5c5 !important;
+    color: #c5c5c5 !important;
+}
+.itemx{
+    float: left;
+    margin-right: 20px;
+    width: 215px;
+    margin-bottom: 20px;
 }

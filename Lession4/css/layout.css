@@ -1,0 +1,140 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.d-flex{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.flex-right{
+    justify-content: end;
+}
+.cl-or{
+    color: orange;
+}
+.text-bold{
+    font-weight: bold;
+}
+
+/* Header */
+#header-top{
+    background-color: #ccc;
+}
+#header-top .fa-brands{
+    opacity: 0.4;
+    padding: 0.5rem 0.8rem;
+    border-right: solid 1px #6b6b6b ;
+}
+#header-top .fa-facebook-f{
+    border-left: solid 1px #6b6b6b;
+}
+.flex-between{
+        justify-content: space-between;
+}
+
+
+/* #header-top>div>div{
+    display: flex;
+    justify-content: end;
+} */
+#header-top p{
+    padding: 0.5rem 0.8rem;
+}
+#header-mid-mid input{
+    padding: 0.5rem;
+    width: 20rem;
+    border-top-left-radius: 0;
+    border-start-end-radius: 0;
+    border: 1px solid #ccc;
+}
+#header-mid-mid button{
+    padding: 0.5rem 0.7rem;
+    opacity: 0.7;
+    margin: -1px;
+    border-top-left-radius: 0;
+    border-start-end-radius: 0;
+    border: 1px solid #ccc;
+}
+
+#header-mid-mid, #header-mid-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+}
+
+#header-mid-right>div{
+    max-height: 2.4rem;
+
+}
+#header-mid-right p{
+    text-transform: uppercase;
+    color: #6b6b6b;
+    width: 13rem;
+    margin-left: 1rem;
+    
+}
+
+#header-mid-right .header-mid-right-left{
+    margin-left: 1rem;
+}
+#header-mid-right img{
+    margin: 0rem;
+}
+#header-bottom{
+    background-color: green;
+}
+#header-bottom a{
+    text-transform: uppercase;
+    color: #fff;
+}
+#header-bottom li{
+    padding: 0.5rem;
+}
+#header-bottom-menu-1 >ul>li{
+    position: relative;
+}
+#header-bottom-menu-2{
+    position: absolute;
+    top: 100%;
+    left:0 ;
+    background-color: #eae3e3;
+    display: none;
+}
+#header-bottom-menu-2>li>a{
+    color: black;
+    text-transform: none;
+}
+#header-bottoom-menu-2>li{
+    border: solid 1px #ccc;
+}
+#header-bottom-menu-1 ul>li:hover ul{
+    display: block;
+    width: 100%;
+}
+#header-bottom-menu-1 ul>li:hover{
+    background-color: orange;
+}
+.header-bottom-frist{
+    width: 16rem;
+}
+
+/* /.Header */
+/* #header-top .fa-phone-volume{
+    color: orange;
+} */
