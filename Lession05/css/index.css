@@ -1,0 +1,165 @@
+/* Index */
+#product-hot-top{
+    background-color: #ccc;
+    margin: 1rem 0;
+}
+#product-hot-top-left{
+    background-color: green;
+    color: #fff;
+    align-items: center;
+    /* padding: 0 0.5rem ; */
+    padding: 0.5rem ;
+    position: relative;
+}
+#product-hot-top-right{
+    display: flex;
+    align-items: center;    
+}
+#product-hot-top-right a{
+    color: #000;
+    margin-right: 0.5rem;
+}
+
+#product-hot-top-right span i{
+    color: green;
+}
+
+#product-hot-top-left::after{
+    content: url('../imgs/icon_section1.png');
+    position: absolute;
+    top: 0;
+    left: calc(100% - 4px);
+    height: 100%;
+}
+
+#product-hot-bottom-left img{
+    width: calc(100% + 1rem);
+}
+.product{
+    width: 23%;
+    border: #ccc solid 1px;
+    margin-bottom: 1.5rem;
+}
+.product-title{
+    text-align: center;
+    font-weight: normal;
+    padding: 0.5rem;
+}
+.product-price{
+    color: green;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.product>div{
+    width: 95%;
+    margin-top: 0.35rem;
+}
+.product-img{
+   position: relative; 
+}
+.product-hover{
+    position: absolute;
+    top: 0;
+    /* background-color: green; */
+    height: 100%;
+}
+.product-hover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    background-color: green; 
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+}
+
+.product-hover p{
+    color: #fff;
+    text-align: justify;
+    font-size: 0.8rem;
+    line-height: 1;
+}
+
+.product-hover button{
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 0;
+    
+}
+.product-hover>div{
+    width: 85%;
+}
+
+footer {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+}
+
+.news-section {
+    text-align: center;
+    padding: 25px;
+}
+
+.news-section h2 {
+    font-size: 25px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.news-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.news-item img {
+    width: 100%;
+    height: 150px; /* Đặt chiều cao cụ thể để ảnh dài hơn */
+    object-fit: cover; /* Đảm bảo ảnh giữ đúng nội dung mà không bị méo */
+    border-radius: 0; /* Góc vuông */
+}
+
+.news-item h3 {
+    font-size: 16pxpx;
+    margin: 10px 0;
+    color: #333;
+}
+
+.news-item .date {
+    font-size: 12px;
+    color: #999;
+}
+
+.news-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+.see-more {
+    display: inline-block;
+    margin-top:15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.see-more:hover {
+    background-color: #45a049;
+}
+
+/* Index */

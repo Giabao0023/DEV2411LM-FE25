@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Max-width</title>
+    <style>
+        /* // `xs` returns only a ruleset and no media query
+        // ... { ... } */
+        *{
+            background-color: red;
+        }
+
+        /* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
+        @media (max-width: 1399.98px) { 
+            *{
+            background-color: rgb(17, 201, 238);
+            }
+         }
+
+              /* // `xl` applies to large devices (desktops, less than 1200px) */
+        @media (max-width: 1199.98px) { 
+            *{
+            background-color: rgb(168, 14, 145);
+            } 
+         }
+
+             /* // `lg` applies to medium devices (tablets, less than 992px) */
+        @media (max-width: 991.98px) { 
+            *{
+            background-color: rgb(252, 76, 76);
+            } 
+         }
+        /* // `md` applies to small devices (landscape phones, less than 768px) */
+        @media (max-width: 767.98px) { 
+            *{
+            background-color: rgb(10, 199, 19);
+            }
+         }
+                 /* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+        @media (max-width: 575.98px) { 
+            *{
+            background-color: rgb(17, 0, 255);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
