@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phép so sánh - Logic - gán </title>
+</head>
+<body>
+    <script>
+        //So sánh == : so sánh giá trị
+        document.write("So sánh ==");
+        document.write(3=="3");  //true
+        document.write("<br/>");
+        document.write(3 == 3); //true
+        document.write("<br/>");
+        document.write(3=="4");//flase
+        document.write("<br/>");
+        
+        //So sánh === : so sánh giá trị và kiểu dữ liệu
+        document.write("So sánh ===");
+        document.write(3 === "3");  //flase
+        document.write("<br/>");
+        document.write(3 === 3);  //true
+        document.write("<br/>");
+        document.write(3 === "4"); //flase
+
+
+
+        ///Logic
+        //AND - &&: nếu tất cả các mệnh đề so sánh đều đúng thì trả về true
+        // ngươkc lại trả về false
+        document.write("<br/>");
+        document.write("phép so sánh logic sử dụng &&");
+        document.write("<br/>");
+        document.write(3=="3" && 3==3); //true
+        document.write("<br/>");
+        document.write(3==4 && 3== 3); //flase
+
+        //OR - ||: nếu một trong các mệnh đề so sánh đúng 
+        // thì chương trình trả về true
+        document.write("<br/>");
+        document.write("phép so sánh logic sử dụng ||");
+        document.write("<br/>");
+        document.write(3=="3" || 3==3); //true
+        document.write("<br/>");
+        document.write(3==4 || 3== 3); //true
+        document.write("<br/>");
+        document.write(3==4 || 3== 5); //flase
+
+        //NOT - !: nếu mệnh đề đang là true thì sẽ chuyển về false
+        // ngược lại nếu mệnh đề đang là false thì sẽ chuyển về true
+        
+        document.write("<br/>");
+        document.write("phép so sánh logic sử dụng !");
+        document.write("<br/>");
+        document.write(!true); //flase
+        document.write("<br/>");
+        document.write(!false); //true
+        document.write("<br/>");
+        document.write(!(3==3)); //flase
+        document.write("<br/>");
+        document.write(!(3==4)); //true
+        document.write("<br/>");
+
+        ///Phép gán
+        // phép toán +,-,*,/,%,++,--
+        // =, +=, -=, *=, /=, %=
+        document.write("Phép gán");
+        document.write("<br/>");    
+        var tuoi = 8;
+        document.write(tuoi); //8
+        tuoi += 2; // <=> tuoi = tuoi + 2;
+        document.write("<br/>");
+        document.write(tuoi); //10
+        tuoi -= 2; // <=> tuoi = tuoi - 2;
+        document.write("<br/>");
+        document.write(tuoi); //8
+        tuoi *= 2; // <=> tuoi = tuoi * 2;
+        document.write("<br/>");
+        document.write(tuoi);  //16
+        tuoi /= 2; // <=> tuoi = tuoi / 2;
+        document.write("<br/>");
+        document.write(tuoi); //8
+        tuoi %= 3; // <=> tuoi = tuoi % 3;
+        document.write("<br/>");
+        document.write(tuoi); //2
+
+    </script>
+</body>
+</html>

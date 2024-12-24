@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        var so_a = prompt("Bạn hãy nhập vào so a:")
+        var so_a = prompt("Bạn hãy nhập vào so b:")
+        var so_a = prompt("Bạn hãy nhập vào so b:")
+
+        if(so_a == 0){
+
+            ptb1(so_b, so_c);
+        }else{
+            ptb2(so_a, so_b, so_c);
+        }
+        function ptb1(so_b, so_c){
+            if(so_b == 0){
+                if(so_c == 0){
+                    document.write("Phương trình có vô số nghiệm");
+                }else{
+                    document.write("Phương trình vô nghiệm");
+                }
+            }else{
+                nghiem = -b/c;
+                document.write("Phương trình có nghiệm là: " + nghiem);
+            }
+        }
+        function ptb2(so_a, so_b, so_c){
+            delta = so_b*so_b - 4*so_a*so_c;
+            if(delta < 0){
+                document.write("Phương trình vô nghiệm");
+            }else if(delta == 0){
+                nghiem = -so_b/(2*so_a);
+                document.write("Phương trình có nghiệm kép: " + nghiem);
+            }else{
+                nghiem1 = (-so_b + Math.sqrt(delta))/(2*so_a);
+                nghiem2 = (-so_b - Math.sqrt(delta))/(2*so_a);
+                document.write("Phương trình có 2 nghiệm phân biệt: " + nghiem1 + " và " + nghiem2);
+            }
+        }
+    </script>
+</body>
+</html>

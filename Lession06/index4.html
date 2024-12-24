@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu lệnh rẽ nhánh</title>
+</head>
+<body>
+    <script>
+        ///Rẽ nhánh
+        ///if
+        //if()
+        //syntax: if(mệnh_đề điều kiện){
+        //khối_lệnh_thực_thi
+        //}
+        if(5>3){
+            document.write("5>3");
+        }
+
+        //if else
+        //syntax: if(mệnh_đề điều kiện){
+        //khối_lệnh_thực_thi_if
+        //}else{
+        //khối_lệnh_thực_thi_else
+        //}
+        if(5<3){
+            document.write("5<3");
+        }else{  
+            document.write("5>3");
+        }
+
+        //if else if
+        //syntax: if(mệnh_đề điều kiện_1){
+        //khối_lệnh_thực_thi_1
+        //}else if(mệnh_đề điều kiện_2){
+        //khối_lệnh_thực_thi_2
+        //}else{
+        //khối_lệnh_thực_thi_n+1
+        //}
+        if(5>3){
+            document.write("5>3");
+        }else if(5==3){
+            document.write("5=3");
+        }else{
+            document.write("5<3");
+        }
+
+        //if lồng nhau
+        //syntax: if(mệnh_đề điều kiện_1){
+        //khối_lệnh_thực_thi_1
+        //if(mệnh_đề điều kiện_2){
+        //khối_lệnh_thực_thi_2
+        if(5>3){
+            document.write("5>3");
+            if(4>3){
+                document.write("5>3");
+            }
+        }
+
+
+
+        ///Switch case
+        //syntax:
+        // switch(biến_điều_kiện){
+        // case biến_kiểm_tra_1:
+        // khối_lệnh_thực_thi_1
+        // break;
+        //khối lện thực thi 2:
+        // break;
+        //khối lện thực thi 3:
+        // break;
+        // ...
+        // default:
+        // khối_lệnh_thực_thi_n+1
+        // break;
+        //}
+
+        document.write("<br/> swich case <br/>");
+        var ngay = 1;
+        switch(ngay){
+            case 1:
+                document.write("Thứ 2 <br/>");
+                break;
+            case 2:
+                document.write("Thứ 3 <br/>");
+                break;
+            case 3:
+                document.write("Thứ 4 <br/>");
+                break; 
+            case 4:
+                document.write("Thứ 5 <br/>");
+                break;
+            case 5:
+                document.write("Thứ 6 <br/>");
+                break;
+            case 6:
+                document.write("Thứ 7 <br/>");
+                break;
+            case 7:
+                document.write("Chủ nhật <br/>");
+                break;
+            default:
+                document.write("Không phải ngày trong tuần <br/>");
+                break;
+        }
+    </script>
+</body>
+</html>

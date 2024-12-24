@@ -1,0 +1,73 @@
+1. TƯơng tác với thẻ HTML
+    - inline 
+    - internal 
+    - external 
+2. Khai báo biến, object, mảng
+    - var tên_biến; 
+3. Cấu trúc điều khiển
+    3.1. If else 
+        - if 
+        - if else 
+        - if else if 
+        - if lồng nhau
+            + sử dụng:
+                if(mệnh_đề_điều_kiện_1){
+                    các_khối_lệnh
+                }else if(mệnh_đề_điều_kiện_2){
+                    các_khối_lệnh
+                }else{
+                    các_khối_lệnh
+                }
+    3.2. switch case 
+        -switch (biến_tham_chiếu){
+            case giá_trị 1: 
+                các_khối_lệnh
+                break;
+            case giá_trị 2: 
+                các_khối_lệnh
+                break;
+                ...
+
+                default:
+                    các_khối_lệnh;
+                    break;
+        }
+4. Vòng lặp
+    3.1. for 
+        for(khai_báo_giá_trị_khởi_đầu; mệnh_đề_điều_kiện; biến_tăng){
+            các_khối_lệnh;
+        }
+    3.2. do while 
+        do{
+            các_khối_lệnh;
+        }while(mệnh_đề_điều_kiện)
+    3.3. while
+        while(mệnh_đề_điều_kiện)
+        {
+            các_khối_lệnh;
+        }
+    3.4. for in
+        for(var tên_biến in tên_mảng/tên_object){
+            các_khối_lệnh
+        }
+5. Hàm - function 
+    -- khai báo
+    function tên_hàm(biến_tham_chiếu_1, biến_tham_chiếu_2,...){
+        các_khối_lệnh;
+    }
+    -- sử dụng
+    tên_hàm(truyền_tham_số_1, truyền_tham_số_2,...);
+6. Hàm xử lý mảng, chuỗi
+    - Hàm xử lý mảng:
+     + sort()
+     + push()
+     + shift()
+     + vauleOf()
+     ...
+    - Hàm xử lý object
+     + concat()
+     + replace()
+     + split()
+     + substring()
+     ...
+7. Dom/Jquery

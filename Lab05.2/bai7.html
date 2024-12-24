@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số chia hết cho 5</title>
+</head>
+<body>
+    <h1>Số từ 1 đến 50 chia hết cho 5</h1>
+    <button onclick="findDivisibleBy5()">In số chia hết cho 5</button>
+
+    <script>
+        function findDivisibleBy5() {
+            const divisibleBy5 = [];
+            for (let i = 1; i <= 50; i++) {
+                if (i % 5 === 0) divisibleBy5.push(i);
+            }
+            alert(`Các số từ 1 đến 50 chia hết cho 5 là: ${divisibleBy5}`);
+        }
+    </script>
+</body>
+</html>

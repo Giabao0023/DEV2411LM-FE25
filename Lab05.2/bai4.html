@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+    <h1>Số nguyên tố nhỏ hơn số nhập</h1>
+    <button onclick="findPrimes()">Tìm số nguyên tố</button>
+
+    <script>
+        function isPrime(num) {
+            if (num < 2) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        function findPrimes() {
+            const n = Number(prompt("Nhập một số:"));
+            const primes = [];
+            for (let i = 2; i < n; i++) {
+                if (isPrime(i)) primes.push(i);
+            }
+            alert(`Các số nguyên tố nhỏ hơn ${n} là: ${primes}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng lặp</title>
+</head>
+<body>
+    <script>
+        //Vòng lặp
+        // Syntax:
+        // for(giá_trị_khởi_đầu; mệnh_đề điều_kiện; biến_tăng/biến_giảm){
+        //     khối_lệnh_thực_thi
+        // }
+        for(var i=0; i<10; i++){
+            document.write(i+"<br>");
+        }
+
+        //Vòng lặp while -- thực thi ít nhất 1 lần
+        // Syntax:
+        //do{
+        //các_khối_lệnh_thực_thi
+        //}while(mệnh_đề điều_kiện);
+        document.write("do while <br/>");
+        var dem =3;
+        do{
+            document.write(dem+"<br/>");
+            dem++;
+        }while(dem<3);
+
+        //Vòng lặp while 
+        // Syntax:
+        // while(mệnh_đề điều_kiện){
+        //     khối_lệnh_thực_thi
+        // }
+        dem=3
+        document.write("while <br/>");
+        while(dem<5){
+            document.write(dem+"<br/>");
+            dem++;
+        }
+
+        ///array
+        var arr = ["dev","vũ ngọc phan", 78, true];
+        //object
+        var obj = {
+            name: "devmaster",
+            address: "25 Vũ Ngọc Phan",
+            age: 18
+        }
+
+        //for in
+        for(var i in obj){
+            document.write(obj[i]+"<br/>");
+        }
+        for(var i in arr){
+            document.write(arr[i]+"<br/>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xử lý mảng</title>
+</head>
+<body>
+    <h1>Xử lý mảng</h1>
+    <button onclick="handleArray()">Xử lý mảng</button>
+
+    <script>
+        function handleArray() {
+            const arr = [1, 5, 6, 9, 9, 4, 5, 6, 54, 7, 3, 23, 6, 7];
+            alert("Mảng ban đầu: " + arr);
+
+            // Tìm các phần tử xuất hiện 2 lần
+            const countMap = {};
+            arr.forEach(num => {
+                countMap[num] = (countMap[num] || 0) + 1;
+            });
+
+            const duplicates = [];
+            for (const [key, value] of Object.entries(countMap)) {
+                if (value === 2) duplicates.push(Number(key));
+            }
+
+            alert("Các số xuất hiện 2 lần: " + duplicates);
+            alert("Số lần xuất hiện của mỗi số:\n" + JSON.stringify(countMap, null, 2));
+        }
+    </script>
+</body>
+</html>

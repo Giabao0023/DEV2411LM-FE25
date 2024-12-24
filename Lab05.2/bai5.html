@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số chia hết cho 3</title>
+</head>
+<body>
+    <h1>Số chia hết cho 3</h1>
+    <button onclick="findDivisibleBy3()">Tìm số chia hết cho 3</button>
+
+    <script>
+        function findDivisibleBy3() {
+            const n = Number(prompt("Nhập một số:"));
+            const divisibleBy3 = [];
+            for (let i = 0; i < n; i++) {
+                if (i % 3 === 0) divisibleBy3.push(i);
+            }
+            alert(`Các số chia hết cho 3 nhỏ hơn ${n} là: ${divisibleBy3}`);
+        }
+    </script>
+</body>
+</html>

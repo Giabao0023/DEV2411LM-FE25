@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 2</title>
+</head>
+<body>
+    <h1>Bài tập 2: Tạo dãy số</h1>
+    <pre id="output"></pre>
+
+    <script>
+        // Tạo dãy số
+        const outputElement = document.getElementById("output");
+        let result = "";
+        for (let i = 0; i < 10; i++) {
+            let line = "";
+            for (let j = 0; j <= i; j++) {
+                line += j;
+            }
+            result += line + "\n";
+        }
+        outputElement.textContent = result;
+    </script>
+</body>
+</html>

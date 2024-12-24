@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra ký tự</title>
+</head>
+<body>
+    <h1>Kiểm tra ký tự có phải số</h1>
+    <button onclick="checkCharacter()">Kiểm tra ký tự</button>
+
+    <script>
+        function isNumber(char) {
+            return !isNaN(char);
+        }
+
+        function checkCharacter() {
+            let input;
+            do {
+                input = prompt("Nhập một ký tự:");
+                if (isNumber(input)) {
+                    alert("True - Đây là một số.");
+                    return;
+                } else {
+                    alert("False - Không phải số. Hãy nhập lại.");
+                }
+            } while (!isNumber(input));
+        }
+    </script>
+</body>
+</html>
