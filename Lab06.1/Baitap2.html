@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Sản Phẩm</title>
+</head>
+<body>
+    <h1>Thêm Sản Phẩm</h1>
+    <form id="productForm">
+        <label for="productName">Tên sản phẩm:</label>
+        <input type="text" id="productName" name="productName" placeholder="Nhập tên sản phẩm"><br>
+
+        <label for="price">Giá:</label>
+        <input type="text" id="price" name="price" placeholder="Nhập giá sản phẩm"><br>
+
+        <label for="quantity">Số lượng:</label>
+        <input type="text" id="quantity" name="quantity" placeholder="Nhập số lượng"><br>
+
+        <button type="button" id="addProductBtn">Thêm Sản Phẩm</button>
+    </form>
+
+    <div id="productErrorMessages"></div>
+
+    <script>
+        
+        document.getElementById("addProductBtn").addEventListener("click", function () {
+            
+            const productName = document.getElementById("productName").value.trim();
+            const price = document.getElementById("price").value.trim();
+            const quantity = document.getElementById("quantity").value.trim();
+
+           
+
+            
+            if (productName === "") {
+                errorMessages += "Tên sản phẩm không được để trống.<br>";
+            }
+
+            
+            if (isNaN(price) || parseFloat(price) <= 0) {
+                errorMessages += "Giá sản phẩm phải là số dương.<br>";
+            }
+
+            if (isNaN(quantity) || parseInt(quantity) <= 0 || !Number.isInteger(parseFloat(quantity))) {
+                errorMessages += "Số lượng phải là số nguyên dương.<br>";
+            }
+
+         
+            const errorContainer = document.getElementById("productErrorMessages");
+            if (errorMessages) {
+                errorContainer.style.color = "red";
+                errorContainer.innerHTML = errorMessages;
+            } else {
+                errorContainer.style.color = "green";
+                errorContainer.innerHTML = "Sản phẩm đã được thêm thành công!";
+            }
+        });
+    </script>
+</body>
+</html>

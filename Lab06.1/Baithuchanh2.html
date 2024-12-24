@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <table width="350">
+            <caption>Login</caption>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="username" id="username"></td>
+                <br/><label for="" id="txtErrorUsername"></label>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" id="password"></td>
+                <br/><label for="" id="txtErrorPassword"></label>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Login" id="login" name="login" onclick="checkLogin()"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function checkLogin(){
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if(username.value == ""){
+                document.getElementById('txtErrorUsername').innerHTML = 'Bạn chưa nhập username';
+                document.getElementById('txtErrorUsername').className = 'error';
+            }else if(password.value == ""){
+                document.getElementById('txtErrorPassword').innerHTML = 'Bạn chưa nhập password';
+                document.getElementById('txtErrorPassword').className = 'error';
+                password.focus();
+            }
+            }
+    </script>
+</body>
+</html>

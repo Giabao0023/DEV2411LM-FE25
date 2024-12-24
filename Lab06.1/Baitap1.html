@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký</title>
+</head>
+<body>
+    <h1>Form Đăng Ký Khách Hàng</h1>
+    <form id="registrationForm">
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" name="name" placeholder="Nhập họ và tên"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Nhập email"><br>
+
+        <label for="phone">Số điện thoại:</label>
+        <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại"><br>
+
+        <button type="button" id="submitBtn">Đăng Ký</button>
+    </form>
+
+    <div id="errorMessages"></div>
+
+    <script>
+        
+        document.getElementById("submitBtn").addEventListener("click", function () {
+           
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+
+            
+            let errorMessages = "";
+
+            
+            if (name === "") {
+                errorMessages += "Họ và tên không được để trống.<br>";
+            }
+
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                errorMessages += "Email không hợp lệ.<br>";
+            }
+
+            
+            const phoneRegex = /^[0-9]{10,}$/;
+            if (!phoneRegex.test(phone)) {
+                errorMessages += "Số điện thoại phải là số và có ít nhất 10 ký tự.<br>";
+            }
+
+            
+            const errorContainer = document.getElementById("errorMessages");
+            if (errorMessages) {
+                errorContainer.style.color = "red";
+                errorContainer.innerHTML = errorMessages;
+            } else {
+                errorContainer.style.color = "green";
+                errorContainer.innerHTML = "Đăng ký thành công!";
+            }
+        });
+    </script>
+</body>
+</html>
