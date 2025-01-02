@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giỏ hàng</title>
+        <style>
+        section{
+            width: 1200px;
+            margin: auto;
+        }
+        section>div,#cart-left .product-cart{
+            display: flex;
+            justify-content: space-between;
+        }
+        #cart-left .product-cart{
+            width: 900px;
+        }
+        .product-quatity .btn-quatity{
+            border: 1px solid #000;
+            padding: 0.5rem;
+            cursor:  pointer;
+        }
+    </style>
+    </head>
+    <body>
+        <section>
+            <h2>Giỏ hàng</h2>
+            <div>
+                <div id="cart-left">
+                </div>
+                <div id="cart-right">
+                    <h3>Tóm tắt đơn hàng</h3>
+                    <p>
+                        Tổng thành tiền: <span>0</span> VND
+                    </p>
+                    <div>
+                        <button onclick="placeOrder()">Đặt hàng ngay</button>
+                        <button onclick="continueShopping()">Tiếp tục mua hàng</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var listCart = [
+                {
+                    id: "SP01",
+                    title: "Cây kim tiền",
+                    img: "imgs/sp-kimtien-1.png",
+                    price: 1200000,
+                    quatity: 3,
+                    total: 3600000,
+                },
+                {
+                    id: "SP02",
+                    title: "Chậu hoa",
+                    img: "imgs/sp-kimtien-1.png",
+                    price: 1400000,
+                    quatity: 2,
+                    total: 2800000,
+                },
+            ];
+
+            function renderCart(cart) {
+                return `<div class="product-cart">
+                    <div class="product-img">
+                        <img src="${cart.img}" alt="${cart.title}">
+                    </div>
+                    <div id="product-dec">
+                        <h3>${cart.title}</h3>
+                        <div class="product-quatity">
+                            <span class="btn-quatity btn-pre" onclick="ProductPre('${cart.id}')">-</span>
+                            <span data-id="${cart.id}" class="quatity">${cart.quatity}</span>
+                            <span class="btn-quatity btn-plus" onclick="ProductPlus('${cart.id}')">+</span>
+                        </div>
+                        <div class="product-price">
+                            Giá <span>${cart.price}</span> VND
+                        </div>
+                        <div class="product-total">
+                            Thành tiền <span>${cart.total}</span> VND
+                        </div>
+                    </div>
+                    <div class="product-button">
+                        <button class="product-delete" onclick="ProductDelete('${cart.id}')">Xoá</button>
+                        <button class="product-update" onclick="ProductUpdate('${cart.id}')">Update</button>
+                    </div>
+                </div>`;
+            }
+
+            function renderlistCart(carts) {
+                $('#cart-left').html('');
+                if (carts.length === 0) {
+                    $('#cart-left').html('<p>Giỏ hàng trống</p>');
+                } else {
+                    for (let i = 0; i < carts.length; i++) {
+                        $('#cart-left').append(renderCart(carts[i]));
+                    }
+                }
+                TotalCart();
+            }
+
+            function ProductPre(id) {
+                for (let i = 0; i < listCart.length; i++) {
+                    if (listCart[i].id === id && listCart[i].quatity > 1) {
+                        listCart[i].quatity--;
+                        listCart[i].total = listCart[i].quatity * listCart[i].price;
+                    }
+                }
+                renderlistCart(listCart);
+            }
+
+            function ProductPlus(id) {
+                for (let i = 0; i < listCart.length; i++) {
+                    if (listCart[i].id === id) {
+                        listCart[i].quatity++;
+                        listCart[i].total = listCart[i].quatity * listCart[i].price;
+                    }
+                }
+                renderlistCart(listCart);
+            }
+
+            function ProductDelete(id) {
+                listCart = listCart.filter((item) => item.id !== id);
+                renderlistCart(listCart);
+            }
+
+            function ProductUpdate(id) {
+                alert(`Cập nhật sản phẩm có ID: ${id}`);
+            }
+
+            function TotalCart() {
+                let total = listCart.reduce((sum, item) => sum + item.total, 0);
+                $('#cart-right > p > span').text(total);
+            }
+
+            function placeOrder() {
+                if (listCart.length === 0) {
+                    alert('Giỏ hàng trống! Vui lòng thêm sản phẩm.');
+                } else {
+                    alert('Đặt hàng thành công!');
+                    listCart = [];
+                    renderlistCart(listCart);
+                }
+            }
+
+            function continueShopping() {
+                alert('Tiếp tục mua hàng!');
+            }
+
+            renderlistCart(listCart);
+        </script>
+    </body>
+</html>

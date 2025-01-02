@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giỏ hàng</title>
+        <style>
+        section{
+            width: 1200px;
+            margin: auto;
+        }
+        section>div,#cart-left .product-cart{
+            display: flex;
+            justify-content: space-between;
+        }
+        #cart-left .product-cart{
+            width: 900px;
+        }
+        .product-quatity .btn-quatity{
+            border: 1px solid #000;
+            padding: 0.5rem;
+            cursor:  pointer;
+        }
+    </style>
+    </head>
+    <body>
+        <section>
+            <h2>Giỏ hàng</h2>
+            <div>
+                <div id="cart-left">
+                    <!-- <div class="product-cart">
+                        <div class="product-img">
+                            <img src="imgs/sp-kimtien-1.png" alt="kim-tien">
+                        </div>
+                        <div id="product-dec">
+                            <h3>Cây kim tiền</h3>
+                            <div id="product-quatity">
+                                <span class="btn-quatity btn-pre">-</span>
+                                <span>1</span>
+                                <span class="btn-quatity btn-plus">+</span>
+                            </div>
+                            <div id="product-price">
+                                Giá <span>29951222</span> VND
+                            </div>
+                            <div id="product-total">
+                                Thành tiền <span>29951222</span> VND
+                            </div>
+                        </div>
+                        <div id="product-button">
+                            <button class="product-delete">Xoá</button>
+                            <button class="product-update">Update</button>
+                        </div>
+                    </div> -->
+                </div>
+                <div id="cart-right">
+                    <h3>Tóm tắt đơn hàng</h3>
+                    <p>
+                        Tổng thành tiền: <span>29551222</span> VND
+                    </p>
+                    <div>
+                        <button><a href="#">Đặt hàng ngay</a></button>
+                        <button><a href="#">Tiếp tục mua hàng</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script>
+                var listCart = [
+                    {
+                        id:"SP01",
+                        title: "Cây kim tiền",
+                        img: "imgs/sp-kimtien-1.png",
+                        price: 1200000,
+                        quatity: 3,
+                        total: 1200000,
+
+                    },
+                    {
+                        id:"SP02",
+                        title: "Cây kim tiền",
+                        img: "imgs/sp-kimtien-1.png",
+                        price: 1400000,
+                        quatity: 3,
+                        total: 1400000
+
+                    }
+                ]
+
+                    function renderCart(cart){
+                        return `<div class="product-cart">
+                        <div class="product-img">
+                            <img src="${cart.img}" alt="${cart.title}">
+                        </div>
+                        <div id="product-dec">
+                            <h3>${cart.title}</h3>
+                            <div class="product-quatity">
+                                <span class="btn-quatity btn-pre" onclick = "ProductPre('${cart.id}')">-</span>
+                                <span data-id="${cart.id}" class = "quatity">${cart.quatity}</span>
+                                <span class="btn-quatity btn-plus" onclick = "ProductPlus('${cart.id}')">+</span>
+                            </div>
+                            <div class="product-price">
+                                Giá <span>${cart.price}</span> VND
+                            </div>
+                            <div class="product-total">
+                                Thành tiền <span>${cart.total}</span> VND
+                            </div>
+                        </div>
+                        <div class="product-button">
+                            <button class="product-delete" onclick="ProductDelete('${cart.id}')">Xoá</button>
+                            <button class="product-update">Update</button>
+                        </div>
+                </div>`
+                    }
+
+                    function renderlistCart(carts){
+                        
+                        for(let i=0; i<carts.length; i++){
+                            $('#cart-left').append(renderCart(carts[i]))
+                        }
+                        TotalCart();
+                    }
+                    renderlistCart(listCart );
+
+                    function ProductPre(id){
+                        for(let i=0; i<listCart.length;i++){
+                            if(listCart[i].id ==id)
+                                if(listCart[i].quatity == 1){
+                                    listCart[i].quatity == 1;
+                                    listCart[i].total = listCart[i].quatity * listCart[i].price;
+                                }else{
+                                    listCart[i].quatity--;
+                                    listCart[i].total = listCart[i].quatity * listCart[i].price;
+                                }
+                        }
+                        $('#cart-left').html('')
+                        renderlistCart(listCart );
+
+                    }
+
+                    function ProductPlus(id){
+                        for(let i=0; i<listCart.length;i++){
+                            if(listCart[i].id ==id)
+                                if(listCart[i].quatity == 1){
+                                    listCart[i].quatity == 1;
+                                    listCart[i].total = listCart[i].quatity * listCart[i].price;
+                                }else{
+                                    listCart[i].quatity++;
+                                    listCart[i].total = listCart[i].quatity * listCart[i].price;
+                                }   
+                        }
+                        $('#cart-left').html('')
+                        renderlistCart(listCart );
+                    }
+
+                    function TotalCart(){
+                        var total = 0
+                        for(let i=0; i<listCart.length; i++){
+                           total += listCart[i].total;
+                        }
+                        $('#cart-right>p>span').html(total);
+                    }
+
+                    function ProductDelete(id){
+                        for(let i=0; i<listCart.length;i++){
+                        //    if(listCart[i].id ==id){
+                         //       listCart.splice(i,i+1)
+                        //        $('#cart-left').html('')
+                         //       renderlistCart(listCart );
+                        //        return;
+                    //   }
+                             listCart = listCart.filter(obj =>obj.id !=id);
+                             $('#cart-left').html('')
+                             renderlistCart(listCart);
+                        }
+                    }
+
+            </script>
+    </body>
+</html>

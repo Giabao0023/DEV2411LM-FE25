@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        .error{
+            display: none;
+            color: red;
+        }
+    </style>
+    </head>
+    <body>
+        <form action enctype="multipart/form-data" method="post">
+            <div class="form-control">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+                <p class="error error-blank">
+                    Username không được để trống
+                </p>
+                <p class="error error-format">
+                    Username không đúng định dạng
+                </p>
+            </div>
+            <div class="form-control">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+                <p class="error error-blank" >
+                    Password không được để trống
+                </p>
+                <p class="error error-format">
+                    Password phải chứa ít nhất 8 ký tự, 1 chữ hoa, 1 chữ thường và 1 ký tự đặc biệt
+                  </p>
+
+            </div>
+            <div class="form-control">
+                <input type="checkbox" name="showPass" id="showPass">
+                <label for="showPass">Hiển thị password</label>
+            </div>
+            <div class="form-control">
+                <input type="submit" name="submit" id="sumbit">
+            </div>
+        </form>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+            <script>
+                regx = {
+                    username: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                    password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
+                }
+                $('input').on('blur', function() {
+                    //console.log($(this).val());
+                    let id = $(this).get(0).id;
+                    if(id =="showPass"){
+                        return;
+                    }
+
+                    if ($(this).val() == "") {
+                        $(this).siblings(".error-blank").show();
+                    } else {
+                        $(this).siblings(".error-blank").hide();
+                        if (regx[id].test($(this).val())) {
+                            $(this).siblings(".error-format").hide();
+                        } else {
+                            $(this).siblings(".error-format").show();
+                        }
+
+                    }
+                });
+             $(":checkbox").on("change", function() {
+                 if($(this).is(":checked")){
+                     $("#password").get(0).type = "text";
+                 }else{
+                     $("#password").get(0).type = "password";
+                 }
+             });
+            </script>
+    </body>
+</html>

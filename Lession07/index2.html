@@ -15,7 +15,7 @@
     <form action="" enctype="multipart/form-data" method="post">
         <div class="form-control">
             <label for="username">Username:</label>
-            <input type="text" name="username" id="username" onblur="usernameBlank()" >
+            <input type="text" name="username" id="username" onblur="check('username')" >
             <p class="error" id="error-user">
                 Username không được để trống
             </p>
@@ -25,7 +25,7 @@
         </div>
         <div class="form-control">
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" onblur="PasswordBlank()">
+            <input type="password" name="password" id="password" onblur="check('password')">
             <p class="error" id="error-pass">
                 Password không được để trống
             </p>
@@ -46,46 +46,38 @@
     <script>
         var regxEmail =/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
         var regxPass = /"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"/
-        //function userNameBlank(){
-          //  var checkBlank = document.getElementById("username").value;
-          //  var username = document.getElementById("username")
-         //   if(checkBlank == ""){
-         //       document.getElementById("error-user").style.display = 'block';
-         //       document.getElementById("error-email-user").style.display = 'none';
-          //  }else{
-          //      document.getElementById("error-user").style.display = 'none';
-                // if(regxEmail.test(checkBlank)){
-                //     document.getElementById("error-email-user").style.display = 'none';
-                // }else{
-                //     document.getElementById("error-email-user").style.display = 'block';
-                // }
-                // checkRegx(regxEmail, checkBlank,0)
-              //  checkRegx2("username", regxEmail, checkBlank)
-           // }
-        //}
-        //function passwordBlank(){
-         //   var checkBlank = document.getElementById("password").value;
-        //    if(checkBlank == ""){
-         //       document.getElementById("error-pass").style.display = 'block';
-          //  }else{
-         //       document.getElementById("error-pass").style.display = 'none';
-                // checkRegx(regxPass, checkBlank,1)
-          //      checkRegx2("password", regxPass, checkBlank)
-         //   }
-      //  }
-      function validateInput(id, errorId, regex) {
-        var inputValue = document.getElementById(id).value;
-        if (inputValue == "") {
-            document.getElementById(errorId).style.display = 'block';
-            var nextError = document.querySelector(`#${id} + p + p`);
-            if (nextError) nextError.style.display = 'none';
-        } else {
-            document.getElementById(errorId).style.display = 'none';
-            if (regex) {
-                checkRegx2(id, regex, inputValue);
+        function userNameBlank(){
+           var checkBlank = document.getElementById("username").value;
+            var username = document.getElementById("username")
+            if(checkBlank == ""){
+                document.getElementById("error-user").style.display = 'block';
+               document.getElementById("error-email-user").style.display = 'none';
+            }else{
+                document.getElementById("error-user").style.display = 'none';
+                 if(regxEmail.test(checkBlank)){
+                     document.getElementById("error-email-user").style.display = 'none';
+                 }else{
+                     document.getElementById("error-email-user").style.display = 'block';
+                 }
+                 checkRegx(regxEmail, checkBlank,0)
+                checkRegx2("username", regxEmail, checkBlank)
             }
         }
-    }
+        function passwordBlank(){
+            var checkBlank = document.getElementById("password").value;
+           if(checkBlank == ""){
+                document.getElementById("error-pass").style.display = 'block';
+            }else{
+                document.getElementById("error-pass").style.display = 'none';
+                // checkRegx(regxPass, checkBlank,1)
+             checkRegx2("password", regxPass, checkBlank)
+           }
+        }
+        
+        regx = {
+            username: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+            password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
+        }
     
         function showPass(){
             var checkShowPass = document.getElementById("showPass");
@@ -94,6 +86,27 @@
                 document.getElementById("password").type = "text"
             }else{
                 document.getElementById("password").type = "password"
+            }
+        }
+
+        function check(id){
+            var checkBlank = document.getElementById(id).value;
+            let p1 = "#" + id + " + p"; // #username + p
+            let p2 = "#" + id + " + p + p"; // #username + p + p
+            if(checkBlank == ""){
+                
+                document.querySelector("p1").style.display = 'block';
+                document.querySelector("p2").style.display = 'none';
+            }else{
+                document.querySelector("p1").style.display = 'none';
+               // if(regxEmail.test(checkBlank)){
+                //    document.getElementById("error-email-user").style.display = 'none';
+                //}else{
+                //    document.getElementById("error-email-user").style.display = 'block';
+               // }
+                //checkRegx(regxEmail, checkBlank,0)
+
+                checkRegx2(id, regx[id], checkBlank)
             }
         }
 

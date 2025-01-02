@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/3.css">
+    </head>
+    <body>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            jQuery(document).ready(function($){
+                $('a>img').click(function(event){
+                    img = $(this).attr('src');
+                    $('#image>img').attr({
+                        'src': img
+                    });
+                $('a>img').removeClass('active');
+                $(this).addClass('active');
+            });
+            });
+        </script>
+        <div id="main">
+            <div id="image">
+                <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="">
+            </div>
+            <div id="thum">
+                <ul>
+                    <li><a href="javascrip:void(0)">
+                        <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="" class="actived">
+                    </a></li>
+                    <li><a href="javascrip:void(0)">
+                        <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="">
+                    </a></li>
+                    <li><a href="javascrip:void(0)">
+                        <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="">
+                    </a></li>
+                    <li><a href="javascrip:void(0)">
+                        <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="">
+                    </a></li>
+                    <li><a href="javascrip:void(0)">
+                        <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="">
+                    </a></li>
+                    <li><a href="javascrip:void(0)">
+                        <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="">
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

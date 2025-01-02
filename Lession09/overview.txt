@@ -1,0 +1,29 @@
+1. Sử dụng Javascrip trong HTML
+    - link file.js <scrip scr="link_js.js"></scrip>
+    - viết js trong file html : <scrip> nội_dung_js </scrip>
+2. DOM/ Jquery
+2.1 DOM
+2.1.1. Cách sử dụng
+    - document.
+2.1.2. Tương tác với thẻ HTML
+    - Tương tác thông qua Id
+        + document.getElementById('tên_id')
+    - Tương tác thông qua class 
+        + document.getElementByClass('tên_class)
+    - Tương tác thông qua tên thẻ HTML
+        + document.getElementByTagName('tên_thẻ_HtML')
+    - Tương tác thông qua cú pháp CSS Selector
+        + document.querySelectorAll('cú_pháp_CSS_Selector')
+2.1.3. Một số event
+    - click, dbclick, blur, ...
+    
+2.2. Jquery
+2.2.1. Cách sử dụng
+    - $('')
+
+2.1.2. Tương tác với thẻ HTML
+    - Tương tác thông qua cú pháp CSS Selector
+    - $('cú_pháp_CSS_Selector')
+
+2.1.3. Một số event
+    - click(), dbclick(), blur(), ...
